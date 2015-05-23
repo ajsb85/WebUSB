@@ -1,2 +1,4 @@
 _site/
 .sass-cache/
+xulrunner/
+xulrunner-stub.exe
