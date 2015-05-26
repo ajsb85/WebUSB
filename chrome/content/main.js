@@ -28,14 +28,14 @@ var hid =  lib.declare("hid_init",
                         ctypes.bool      /* return type */);
 var struct_hid_device_info;
 
-  struct_hid_device_info = ctypes.StructType('hid_device_info', [
+  struct_hid_device_info = new ctypes.StructType('hid_device_info', [
     {'path': ctypes.char.ptr},
     {'vendor_id': ctypes.unsigned_short},
     {'product_id': ctypes.unsigned_short},
-    {'serial_number': ctypes.jschar.ptr},
+    {'serial_number': ctypes.char16_t.ptr},
     {'release_number': ctypes.unsigned_short},
-    {'manufacturer_string': ctypes.jschar.ptr},
-    {'product_string': ctypes.jschar.ptr},
+    {'manufacturer_string': ctypes.char16_t.ptr},
+    {'product_string': ctypes.char16_t.ptr},
     {'usage_page': ctypes.unsigned_short},
     {'usage': ctypes.unsigned_short},
     {'interface_number': ctypes.int}
